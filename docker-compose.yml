@@ -1,0 +1,8 @@
+version: '3'
+services:
+  simple-mobile-app-mv:
+    build: .
+    image: sonarserver
+    container_name: sonarserver
+    ports:
+      - "9000-9000"

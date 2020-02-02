@@ -142,6 +142,6 @@ public class mobileProject {
         else {
             System.out.println("Contact Name Found" + getContact);
         }
-        return String;
+        return name;
     }
 }

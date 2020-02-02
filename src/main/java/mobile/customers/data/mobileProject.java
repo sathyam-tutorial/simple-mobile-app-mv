@@ -89,10 +89,12 @@ public class mobileProject {
         return String;
     }
     public static String addContact(String name, String number) {
-        System.out.println("Please Enter Contact Name to add");
-        name = scanner.next();
-        System.out.println("Please Enter Phone Number to add");
-        number = scanner.next();
+        if(name == null && number == null) {
+            System.out.println("Please Enter Contact Name to add");
+            name = scanner.next();
+            System.out.println("Please Enter Phone Number to add");
+            number = scanner.next();
+        }
         contact.storeContact(name, number);
         System.out.println("Successfully Added " + name + " and " + number + " to Mobile");
         return String;
@@ -129,8 +131,10 @@ public class mobileProject {
     }
     public static String findContact(String name) {
         String purpose = "query";
-        System.out.println("Please Enter the Contact name to LookUp: ");
-        name = scanner.next();
+        if(name == null) {
+            System.out.println("Please Enter the Contact name to LookUp: ");
+            name = scanner.next();
+        }
         List<String> getContact = contact.manageContact(name, purpose);
         if(getContact.contains(null)) {
             System.out.println("Contact name " + name + " not found");

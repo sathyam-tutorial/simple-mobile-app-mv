@@ -11,7 +11,8 @@ public class mobileProjectTest {
         String name = "Rocky";
         String number = "9876552";
 
-        myContact.storeContact(name, number);
+        //myContact.storeContact(name, number);
+        addNewContact.addContact(name,number);
         assertEquals("Customer name matched",name,addNewContact.findContact(name));
     }
 }
